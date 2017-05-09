@@ -10,6 +10,8 @@
     <modules>
         <module>core</module>
         <module>demo</module>
+        <module>demo-provider</module>
+        <module>core-api</module>
     </modules>
 
     <properties>
@@ -103,6 +105,18 @@
                 <scope>test</scope>
             </dependency>
 
+            <!-- zookeeper-->
+            <dependency>
+                <groupId>org.apache.zookeeper</groupId>
+                <artifactId>zookeeper</artifactId>
+                <version>3.4.6</version>
+            </dependency>
+            <dependency>
+                <groupId>com.101tec</groupId>
+                <artifactId>zkclient</artifactId>
+                <version>0.9</version>
+            </dependency>
+
             <!-- jacson-->
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
@@ -111,11 +125,16 @@
             </dependency>
 
 
-            <!-- dubbo-->
+            <!-- common-->
             <dependency>
-                <groupId>com.qunar.dubbo</groupId>
-                <artifactId>dubbo</artifactId>
-                <version>3.2.15</version>
+                <groupId>qunar.common</groupId>
+                <artifactId>common-rpc</artifactId>
+                <version>8.2.18</version>
+            </dependency>
+            <dependency>
+                <groupId>qunar.common</groupId>
+                <artifactId>common-api</artifactId>
+                <version>8.2.18</version>
             </dependency>
 
             <!-- 日志-->
@@ -134,6 +153,11 @@
             <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>core-api</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>

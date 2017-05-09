@@ -8,16 +8,6 @@
 
     <dubbo:application name="ordercenter" owner="jiawei.gao,yanghao.chen,chong.yang,jiong.chen,wanghan.wang,bowen.wang,guocai.zhang,huayang,zhou" organization="tc"/>
 
-
-    <dubbo:provider>
-        <dubbo:parameter key="qloglevel" value="6" />
-    </dubbo:provider>
-
-    <dubbo:consumer>
-        <dubbo:parameter key="timeout" value="3000" />
-        <dubbo:parameter key="qloglevel" value="6" />
-    </dubbo:consumer>
-
     <import resource="dubbo-provider.xml" />
-    <!--<import resource="consumer.xml" />-->
+    <import resource="dubbo-consumer.xml" />
 </beans>

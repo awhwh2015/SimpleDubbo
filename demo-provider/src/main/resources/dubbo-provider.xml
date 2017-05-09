@@ -4,8 +4,9 @@
 
     <dubbo:protocol name="dubbo" port="20871" threadpool="fixed" threads="50"/>
 
-    <dubbo:registry id="simple-dubbo-demo" address="zookeeper://127.0.0.1:2181" protocol="zookeeper" group="my-simple-dubbo-demo" />
+    <dubbo:registry id="simple-dubbo-demo" address="127.0.0.1:2181" protocol="zookeeper" group="my-simple-dubbo-demo" />
 
-    <dubbo:service interface="pers.wh.simple.dubbo.demo.HelloWorld" ref="helloWorld" register="simple-dubbo-demo"/>
+    <dubbo:service interface="pers.wh.simple.dubbo.demo.api.HelloWorld" ref="helloWorld" registry="simple-dubbo-demo"
+            version="1.0.0" timeout="3000"/>
 
 </beans>
